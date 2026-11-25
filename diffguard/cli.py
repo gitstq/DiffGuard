@@ -93,7 +93,7 @@ def main(argv: List[str] = None) -> int:
     from .rules import RULES
     if args.list_rules:
         for r in RULES:
-            print(f"{r.rule_id}\t{r.severity}\t{r.category}\t"
+            print(f"{r.rule_id}\t{r.severity}\t{r.category}\t"  # diffguard:ignore[DL-P03]
                   f"{r.message_cn}")
         return EXIT_CLEAN
 

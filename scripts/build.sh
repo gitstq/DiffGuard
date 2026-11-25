@@ -4,7 +4,7 @@
 set -euo pipefail
 
 cd "$(dirname "$0")/.."
-VERSION=$(python3 -c "import diffguard; print(diffguard.__version__)")
+VERSION=$(python3 -c "import diffguard; print(diffguard.__version__)")  # diffguard:ignore[DL-P03]
 DIST="dist"
 PYZ="diffguard-${VERSION}.pyz"
 ZIP="diffguard-${VERSION}-source.zip"

@@ -239,7 +239,7 @@ RULES: List[Rule] = [
          "捕获具体异常类型，必要时 finally 释放资源。",
          "Catch specific exception types and release resources in finally.",
          languages=frozenset({"py"}),),
-    Rule("DL-Q05", "quality", "low", _c(r"[!=]\s*None\b"),
+    Rule("DL-Q05", "quality", "low", _c(r"(?<![!=<>])[!=]=\s*None\b"),
          "与 None 比较应使用 is/is not 而非 ==/!=。",
          "Compare to None with is/is not, not ==/!=.",
          "改写为 ``is None`` / ``is not None``。",
