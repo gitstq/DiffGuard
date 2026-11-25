@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "diffguard"
+version = "1.0.0"
+description = "Zero-dependency, offline-first deterministic git diff code review engine (CLI + library) / 零依赖、离线优先的 Git 差异确定性代码审查引擎"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "gitstq" }]
+keywords = ["code-review", "diff", "static-analysis", "sarif", "ci", "security", "linter"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Security",
+]
+
+[project.scripts]
+diffguard = "diffguard.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["diffguard*"]
